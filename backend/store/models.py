@@ -69,6 +69,7 @@ class Column(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=150, unique=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
+    brand = models.CharField(max_length=50, null=True, blank=True)
     column = models.ForeignKey(Column, on_delete=models.CASCADE, null=True, blank=True)
     wear_size = models.CharField(choices=wear_sizes, max_length=15, null=True, blank=True)
     shoe_size = models.CharField(choices=shoe_sizes, max_length=15, null=True, blank=True)
