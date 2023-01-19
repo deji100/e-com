@@ -1,0 +1,48 @@
+.cat {
+    width: 40%;
+    height: 50px;
+    margin: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.05),
+    5px 10px 5px rgba(0, 0, 0, 0.05),
+    5px 7px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cat .cat-item .cat-item-link .icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cat .cat-item .cat-item-link.active {
+    border-bottom: 3px solid orange;
+}
+
+.cat .cat-item:hover .icon-name {
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.781);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 5s ease;
+}
+
+.cat .cat-item .icon-name {
+    display: none;
+    transition: all 5s ease;
+}
